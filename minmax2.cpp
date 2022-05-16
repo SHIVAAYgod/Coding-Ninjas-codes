@@ -37,12 +37,12 @@ struct Pair getMinMax(int arr[], int low, int high)
         }
     }
 
-    // there are more than 2 element
+    // there are more than 2 element we divide the array 
     mid = (low + high) / 2;
     mml = getMinMax(arr, low, mid);
     mmr = getMinMax(arr, mid + 1, high);
 
-    // compare the minimums of both halfs
+    // compare the minimums of both halves
     if (mml.min < mmr.min)
     {
         minmax.min = mml.min;
